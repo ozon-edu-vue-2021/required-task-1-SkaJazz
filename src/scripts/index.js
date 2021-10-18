@@ -107,8 +107,6 @@ const renderPictures = function(list) {
     const clone = templateImageCard.content.cloneNode(true);
     const link = clone.querySelector("a");
 
-    console.log(element);
-
     link.href = element.url;
     link.dataset.id = element.id;
 
@@ -130,7 +128,6 @@ const renderPictures = function(list) {
  * @param {object} picture
  */
 const renderPopupPicture = function(picture) {
-  console.log(picture);
   const clone = templateImagePopup.content.cloneNode(true);
   const img = clone.querySelector("img");
   const link = clone.querySelector("a");
