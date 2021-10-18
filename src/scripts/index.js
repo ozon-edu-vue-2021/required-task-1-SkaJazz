@@ -107,11 +107,15 @@ const renderPictures = function(list) {
     const clone = templateImageCard.content.cloneNode(true);
     const link = clone.querySelector("a");
 
+    console.log(element)
+
     link.href = element.url;
     link.dataset.id = element.id;
 
     const image = clone.querySelector("img");
     image.src = cropImage(element.download_url, 5);
+    image.width = element.width / 5;
+    image.heigth = element.height / 5;
     image.alt = element.author;
     image.classList.add("preview");
     fragment.appendChild(clone);
@@ -137,6 +141,7 @@ const renderPopupPicture = function(picture) {
   img.alt = picture.author;
   author.textContent = picture.author;
   img.width = picture.width / 10;
+  img.height = picture.height / 10;
   link.href = picture.download_url;
 
   popupContainer.innerHTML = "";

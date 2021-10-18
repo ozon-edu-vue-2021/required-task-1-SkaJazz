@@ -14,10 +14,11 @@ img {
 
 a {
   color: #ec407a;
+  transition: color 0.2s ease-out;
 }
 
 a:hover {
-  color: #e91e63;
+  color: #ff7eaa;
 }
 
 button {
@@ -88,8 +89,8 @@ a {
 
 figure {
   max-width: 100%;
-  min-height: 350px;
   margin: 0;
+  padding-bottom: 5px;
 }
 
 figure img {
