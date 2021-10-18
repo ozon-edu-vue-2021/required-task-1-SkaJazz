@@ -10,12 +10,12 @@ const popupContainer = document.querySelector(".popup .content");
 const popupClose = document.querySelector(".popup .action");
 const loader = document.querySelector(".loader");
 
-const MAX_PAGE_IMAGES = 34;
+const MAX_PAGE_IMAGES = 340;
 let loaderTimeout;
 
 /**
  * Функция задаёт первоначальное состояние страницы.
- * Отправляется первый запрос за картинками, юез параметров т.к. с дефолтными настройками.
+ * Отправляется первый запрос за картинками, без параметров т.к. с дефолтными настройками.
  */
 const initialState = function() {
   action.disabled = false;
@@ -61,6 +61,7 @@ const getPictureInfo = function(id = 0) {
  */
 const showLoader = function() {
   loader.style.visibility = "visible";
+  loader.style.opacity = "1";
 };
 
 /**
@@ -144,7 +145,7 @@ const renderPopupPicture = function(picture) {
 };
 
 /**
- * Функция переклбчает класс открытия на попапе
+ * Функция переключает класс открытия на попапе
  */
 const togglePopup = function() {
   popup.classList.toggle("open");

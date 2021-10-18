@@ -10,7 +10,7 @@
   background-color: rgb(187, 222, 251, 0.8);
   border-radius: 50%;
   z-index: 10;
-  transition: opacity 0.6s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .loader div {
