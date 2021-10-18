@@ -107,7 +107,7 @@ const renderPictures = function(list) {
     const clone = templateImageCard.content.cloneNode(true);
     const link = clone.querySelector("a");
 
-    console.log(element)
+    console.log(element);
 
     link.href = element.url;
     link.dataset.id = element.id;
