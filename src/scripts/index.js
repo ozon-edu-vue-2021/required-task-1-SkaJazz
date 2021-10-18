@@ -29,7 +29,6 @@ const initialState = function() {
  * @param {number} limit
  */
 const getPictures = function(page = 1, limit = 10) {
-  console.log(page);
   showLoader();
   fetch(`https://picsum.photos/v2/list?page=${page};limit=${limit}`)
     .then(function(response) {
@@ -128,6 +127,7 @@ const renderPictures = function(list) {
  * @param {object} picture
  */
 const renderPopupPicture = function(picture) {
+    console.log(picture)
   const clone = templateImagePopup.content.cloneNode(true);
   const img = clone.querySelector("img");
   const link = clone.querySelector("a");
@@ -183,10 +183,7 @@ const actionHandler = function(evt) {
  */
 const imageHandler = function(evt) {
   evt.preventDefault();
-
-  if (evt.target.closest("a")) {
-    getPictureInfo(evt.target.dataset.id);
-  }
+    getPictureInfo(evt.target.closest("a").dataset.id);
 };
 
 action.addEventListener("click", actionHandler);
