@@ -115,7 +115,6 @@ const renderPictures = function(list) {
     const image = clone.querySelector("img");
     image.src = cropImage(element.download_url, 5);
     image.width = element.width / 5;
-    image.heigth = element.height / 5;
     image.alt = element.author;
     image.classList.add("preview");
     fragment.appendChild(clone);
