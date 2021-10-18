@@ -71,7 +71,6 @@ main {
   margin-bottom: 20px;
   column-count: 4;
   column-gap: 5px;
-  min-height: 400px;
 }
 
 a {
