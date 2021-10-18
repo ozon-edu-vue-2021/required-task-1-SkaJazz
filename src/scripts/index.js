@@ -10,7 +10,7 @@ const popupContainer = document.querySelector(".popup .content");
 const popupClose = document.querySelector(".popup .action");
 const loader = document.querySelector(".loader");
 
-const MAX_PAGE_IMAGES = 340;
+const MAX_PAGE_IMAGES = 34;
 let loaderTimeout;
 
 /**
@@ -29,6 +29,7 @@ const initialState = function() {
  * @param {number} limit
  */
 const getPictures = function(page = 1, limit = 10) {
+    console.log(page)
   showLoader();
   fetch(`https://picsum.photos/v2/list?page=${page};limit=${limit}`)
     .then(function(response) {
@@ -161,7 +162,7 @@ const togglePopup = function() {
  */
 const actionHandler = function(evt) {
   evt.preventDefault();
-  const nextPage = evt.currentTarget.dataset.page;
+  const nextPage = +evt.currentTarget.dataset.page;
   evt.currentTarget.dataset.page = nextPage + 1;
 
   if (nextPage > MAX_PAGE_IMAGES) {
