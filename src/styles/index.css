@@ -9,7 +9,7 @@ body {
 img {
   width: 100%;
   max-width: 100%;
-  display: bloсk;
+  display: block; /* cyrillic "c"? srsly? */
 }
 
 a {
@@ -25,7 +25,7 @@ button {
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: 0.2s background-color;
+  transition: background-color 0.2s ease-out;
 }
 
 button:disabled {
@@ -79,7 +79,6 @@ a {
   overflow: hidden;
   width: 100%;
 }
-
 
 /* Popup style */
 .popup .content {
