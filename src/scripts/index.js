@@ -29,7 +29,7 @@ const initialState = function() {
  * @param {number} limit
  */
 const getPictures = function(page = 1, limit = 10) {
-    console.log(page)
+  console.log(page);
   showLoader();
   fetch(`https://picsum.photos/v2/list?page=${page};limit=${limit}`)
     .then(function(response) {
